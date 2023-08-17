@@ -3,7 +3,7 @@ const spanEl = document.getElementById("name-output");
 inputEl.addEventListener("input", inputHi);
 
 function inputHi(){
-  inputEl.value === "" ?
+  inputEl.value.trim() === "" ?
     spanEl.textContent = "Anonymous" :
-    spanEl.textContent = inputEl.value;
+    spanEl.textContent = inputEl.value.trim();
 }

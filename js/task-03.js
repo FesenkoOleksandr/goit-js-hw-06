@@ -16,7 +16,7 @@ const images = [
 const ulEl = document.querySelector('.gallery');
 ulEl.classList.add('gallery-style');
 const imgMarkup = images.map(element => `<li class="gallery-item"><img class="gallery-img" src=${element.url} alt="${element.alt}"></img></li>`
-);
+).join('');
 ulEl.insertAdjacentHTML("afterbegin", imgMarkup);
 
 

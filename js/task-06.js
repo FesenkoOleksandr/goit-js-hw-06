@@ -2,12 +2,23 @@ const inputEl = document.querySelector("#validation-input");
 
 const symbolNum = Number(inputEl.dataset.length);
 
-inputEl.addEventListener("blur", checkOfSymbol);
 
 function checkOfSymbol (event) {
-  inputEl.value.length
-  === symbolNum ?
-  inputEl.id = "validation-input.valid"
-  :
-  inputEl.id = "validation-input.invalid";
-};
+  // inputEl.classList.remove("valid", "invalid");
+  // inputEl.value.trim().length
+  // === symbolNum ?
+  // inputEl.classList.add("valid")
+  // :
+  // inputEl.classList.add("invalid");
+
+
+  if (inputEl.value.trim().length  === symbolNum) {
+  inputEl.classList.remove("invalid")
+  inputEl.classList.add("valid")
+  }
+  else {
+  inputEl.classList.remove("valid")
+  inputEl.classList.add("invalid");
+}
+}
+inputEl.addEventListener("blur", checkOfSymbol);
